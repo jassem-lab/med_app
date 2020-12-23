@@ -40,6 +40,7 @@ class brainTree {
                 console.log('Transaction ID: ' + result.transaction.id);
                 return res.json(result)
             } else {
+                return res.json(result)
                 console.error(result.message);
             }
         });

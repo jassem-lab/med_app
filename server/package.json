@@ -1,9 +1,16 @@
 {
-  "name": "Paramed",
+  "name": "paramed",
   "version": "1.0.0",
   "description": "A E-commerce website.",
   "main": "app.js",
+  "engines": {
+    "node": "12.x"
+  },
   "scripts": {
+    "heroku-postbuild": "cd client && npm install --only=dev && npm install && npm run build",
+    "start": "node app.js",
+    "client": "npm run start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\" ", 
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

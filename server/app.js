@@ -27,7 +27,7 @@ mongoose
   })
   .then(() =>
     console.log(
-      "==============Mongodb Database Connected Successfully=============="
+      "============== Mongodb Database Connected Successfully =============="
     )
   )
   .catch((err) => console.log("Database Not Connected !!!"));
@@ -61,5 +61,5 @@ if (process.env.NODE_ENV === "production") {
 // Run Server
 const PORT = process.env.PORT || 8000;
 app.listen(PORT, () => {
-  console.log("Server is running on ", PORT);
+  console.log(`============== Server is running on ${PORT} ==============`);
 });
