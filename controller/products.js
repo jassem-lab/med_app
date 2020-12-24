@@ -35,7 +35,7 @@ class Product {
             return res.json({ error: "All filled must be required" })
         }
         // Validate Name and description
-        else if (pName.length > 255 || pDescription.length > 3000) {
+        else if (pName.length > 10 || pDescription.length > 20) {
             Product.deleteImages(images)
             return res.json({ error: "Name 255 & Description must not be 3000 charecter long" })
         }
