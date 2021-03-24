@@ -2,7 +2,6 @@ import React, { Fragment, useContext, useEffect } from 'react';
 import { DashboardContext } from './';
 import { uploadImage, sliderImages, deleteImage } from './Action';
 
-const apiURL = process.env.REACT_APP_API_URL
 
 const Customize = () => {
 
@@ -77,7 +76,7 @@ const AllImages = () => {
               ? data.sliderImages.map((item,index)=> {
                   return (
                     <div key={index} className="relative col-span-1 m-2 border">
-                      <img className="w-full md:h-32 object-center object-cover" src={`${apiURL}/uploads/customize/${item.slideImage}`} alt="sliderImages"/>
+                      <img className="w-full md:h-32 object-center object-cover" src={`/uploads/customize/${item.slideImage}`} alt="sliderImages"/>
                       <span onClick={e=> deleteImageReq(item._id)} style={{background: '#303031'}} className="absolute top-0 right-0 m-1 text-white cursor-pointer rounded-full p-1">
                         <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" /></svg>
                       </span>
